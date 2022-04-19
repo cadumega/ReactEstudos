@@ -1,27 +1,22 @@
-import {useState} from 'react'
+import { useState } from "react";
 
 const ManageData = () => {
+  const someData = 10;
 
-  let someData = 10
-  const [number, setNumber] = useState(15)
-
-  console.log(someData);
-
-  console.log(number);
-
+  const [anotherNumber, setAnotherNumber] = useState(15);
 
   return (
     <div>
       <div>
-        <p>Valor {someData}</p>
+        <p>Valor: {someData}</p>
         <button onClick={() => (someData = 15)}>Mudar variável</button>
       </div>
       <div>
-        <p>Valor {number}</p>
-        <button onClick={() => setNumber(25)}>Mudar o state</button>    
+        <p>Valor: {anotherNumber}</p>
+        <button onClick={() => setAnotherNumber(20)}>Mudar state</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ManageData
+export default ManageData;
