@@ -1,0 +1,14 @@
+form {
+    margin: 0 auto;
+    text-align: left;
+    width: 800px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+input, textarea, select {
+    display: block;
+    margin: 10px;
+}
