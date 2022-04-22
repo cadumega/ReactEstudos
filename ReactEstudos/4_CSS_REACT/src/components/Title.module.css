@@ -1,0 +1,10 @@
+.my_title {                 
+  background-color: #000;
+  color: orange;
+  padding: 10px;
+}
+
+
+/*  - nao é bem visto para separar a palavra de class no CSS modules */
+/* É escoped só funciona para o arquivo TItle.jsx , mesmo que eu repita o nome de class.
+Bom para restringir o css ao nível de componente ou ao nível global. */
