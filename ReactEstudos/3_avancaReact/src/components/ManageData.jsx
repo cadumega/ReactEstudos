@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 const ManageData = () => {
-  const someData = 10;
+  let someDataTest = 10;
 
   const [anotherNumber, setAnotherNumber] = useState(15);
 
   return (
     <div>
       <div>
-        <p>Valor: {someData}</p>
-        <button onClick={() => (someData = 15)}>Mudar variável</button>
+        <p>Valor: {someDataTest}</p>
+        <button onClick={() => (someDataTest = 15)}>Mudar variável</button>
       </div>
       <div>
         <p>Valor: {anotherNumber}</p>
