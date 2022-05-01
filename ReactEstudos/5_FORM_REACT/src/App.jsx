@@ -4,13 +4,18 @@ import MyForm from './components/MyForm'
 
 function App() {
 
-  return (
-    <div className="App">
-     <h2>Forms</h2>
-     <MyForm user={{name:"Josias" ,email:"josias@gmmail.com"}} /> 
-     {/* user é um objeto que será passado para MyForm */}
-    </div>
-  )
+    return (
+        <div className="App">
+            <h2>Forms</h2>
+            <MyForm user={{
+                name: "Josias",
+                email: "josias@gmmail.com",
+                bio: "Sou um advogado", 
+                role: "admin"
+            }} />
+            {/* user é um objeto que será passado para MyForm */}
+        </div>
+    )
 }
 
 export default App

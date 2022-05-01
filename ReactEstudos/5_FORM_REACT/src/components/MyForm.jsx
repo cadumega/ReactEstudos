@@ -8,6 +8,9 @@ const MyForm = ({ user }) => {
     let [name, setName] = useState(user ? user.name : "")
     let [email, setEmail] = useState(user ? user.email : "")
 
+    let [bio, setBio] = useState(user ? user.bio : "")
+    let [role, setRole] = useState(user ? user.role : "")
+
     const handleName = (e) => {
         // console.log("Mudou o nome");
         setName(e.target.value);
@@ -16,7 +19,12 @@ const MyForm = ({ user }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();                // Ira parar o evento padrão do formulário
-        console.log(name, email);
+        console.log(name, email, bio, role);
+
+        // 7- Limpar formulário
+        setName("");
+        setEmail("");
+        setBio("");
     }
 
     // console.log(name);
@@ -38,6 +46,19 @@ const MyForm = ({ user }) => {
                     <input type="email" name="email" value={email} placeholder='Digite o seu e-mail'
                         onChange={(e) => setEmail(e.target.value)} />
                 </label>
+                <label>
+                    <span>Bio:</span>
+                    <textarea name="bio" id="textareaid" placeholder="Descrição de text area" onChange={(e) =>setBio(e.target.value)} value={bio} cols="30" rows="10"></textarea>
+                </label>
+                <label>
+                    <span>Função no sistema</span>
+                    <select name="role" id="roleid" onChange={(e) => setRole(e.target.value)} value={role}>
+                        <option value="user">Usuário</option>
+                        <option value="editor">Editor</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </label>
+                
                 <input type="submit" value="Enviar" />
             </form>
         </div>
